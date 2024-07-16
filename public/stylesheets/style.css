@@ -5,13 +5,22 @@ body {
   box-sizing: border-box;
   max-width: 90%;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: white;
+  font: 3rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #bababa;
+  border: 16px solid white;
   text-align: center;
+  font-weight: bold;
+  color: white;
+}
+p{
+  margin-top: 1rem;
 }
 
 html{
-  background: #676f78;
+  background: rgb(166,180,194);
+  background: linear-gradient(0deg, rgb(78, 81, 85) 0%, rgb(195, 213, 234) 100%);
+  background-size: cover;
+  min-height:100vh;
 }
 
 a {
