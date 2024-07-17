@@ -13,7 +13,17 @@ router.get('/', async function (req, res, next) {
     const email = req.query.email;
     const listId = "64df6ac5cf";
     const subscriberHash = md5(email);
-    const tag = req.query.tag === "direct" ? "4 Rent Direct Contact" : "4 Rent Maybe Interested";
+    let tag = "";
+    switch (req.query.tag) {
+        case "direct" :
+            tag = "direct"
+            break;
+        case "media-kit" :
+            tag = "media-kit"
+            break;
+        default:
+            tag = "4 Rent Maybe Interested"
+    }
 
     try{
       await mailchimp.lists.updateListMemberTags(
